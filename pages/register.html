@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/register.css">
+  <style>
+    body {
+      background: url(../images/show02.png) no-repeat;
+      background-size: cover;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部区域 -->
+  <header class="index_header" style="background-color: #1a1a1a">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="../index.html" title="回到首页">
+          <i class="bi bi-bank2"></i>&nbsp;theMuseum
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">首页 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Events.html">参观与活动</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">新闻公告</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:;" role="button" data-toggle="dropdown"
+                aria-expanded="false">
+                云游文物
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="javascript:;">典藏<i class="bi bi-bank" style="margin-left: 10px"></i></a>
+                <a class="dropdown-item" href="javascript:;">数创<i class="bi bi-bookmark-heart"
+                    style="margin-left: 10px"></i></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:;">研究<i class="bi bi-camera"
+                    style="margin-left: 10px"></i></a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="myself.html">关于我自己</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- 内容区域 -->
+  <section class="register_con">
+    <div class="container register_container" id="container">
+      <div class="form-container sign-up-container form_container sign_up_container">
+        <form action="#">
+          <h1>注册</h1>
+          <div class="social-container">
+            <a href="#" class="social">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="#" class="social">
+              <i class="bi bi-sina-weibo"></i>
+            </a>
+            <a href="#" class="social">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+          <input type="text" placeholder="用户名">
+          <input type="email" placeholder="邮箱">
+          <input type="password" placeholder="密码">
+          <button>注册</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <h1>登录</h1>
+          <div class="social-container">
+            <a href="#" class="social">
+              <i class="bi bi-wechat"></i>
+            </a>
+            <a href="#" class="social">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="#" class="social">
+              <i class="bi bi-tiktok"></i>
+            </a>
+          </div>
+          <input type="email" placeholder="邮箱">
+          <input type="password" placeholder="密码">
+          <button>登录</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>欢迎回来</h1>
+            <p>与我们保持联系请登录您的个人信息</p>
+            <button class="ghost" id="signIn">登录</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>欢迎光临</h1>
+            <p>输入您的个人资料，并与我们一起开始旅程</p>
+            <button class="ghost" id="signUp">注册</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="../jquery/jquery-1.12.4.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+      container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+      container.classList.remove("right-panel-active");
+    });
+  </script>
+</body>
+
+</html>

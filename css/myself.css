@@ -1,0 +1,17 @@
+.profile-image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: 72px;
+}
+
+.profile-section {
+  padding: 2rem;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+
+.bio {
+  font-size: 1.1rem;
+}
